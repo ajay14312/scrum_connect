@@ -32,6 +32,7 @@ export class WeatherComponent implements OnInit {
         this.tempDetails.push(res);
       }
       this.tempdetailsLength = this.tempDetails.length;
+      this.cityname = '';
     })
   }
 
