@@ -1,0 +1,25 @@
+<div class="main-div">
+  <div>
+    <h2 class="text-position">24 hours weather forecast</h2>
+  </div>
+  <div>
+    <input type="text" placeholder="Search a city" [(ngModel)]="cityName" class="input-position">
+    <button type="button" (click)="searchWeatherDetails()">Search</button>
+  </div>
+  <div>
+    <span class="text-style span-position">(Enter city name as shown here: city name,country id example: London,us)</span>
+  </div>
+  <br>
+  <div *ngIf="tempdetailsLength > 0">
+    <table>
+      <tr>
+        <th>City</th>
+        <th>Temperature</th>
+      </tr>
+      <tr *ngFor="let temp of tempDetails">
+        <td>{{temp.name}}</td>
+        <td>{{temp.main.temp}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
