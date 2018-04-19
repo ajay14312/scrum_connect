@@ -7,7 +7,7 @@
     <button type="button" (click)="searchWeatherDetails()" [disabled]="cityName === ''">Search</button>
   </div>
   <div>
-    <span class="text-style span-position">(Enter city name as shown here: city name,country id example: London,us)</span>
+    <span class="text-style span-position">(Enter city name as shown here: city name,country code. Example: Bengaluru,IN)</span>
   </div>
   <br>
   <div *ngIf="tempdetailsLength > 0">
