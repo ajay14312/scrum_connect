@@ -9,23 +9,21 @@ describe('my-app App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display message', () => {
     page.navigateTo();
     expect(page.getParagraphText()).toEqual('24 hours weather forecast');
   });
 
-  it('should display welcome message', () => {
+  it('should display "Search"', () => {
     page.navigateTo();
     expect(page.getPlaceHolder().getText()).toEqual('Search');
   });
 
-  it('should display welcome message', () => {
+  it('should display "London"', () => {
     page.navigateTo();
     page.setInputValue();
-    browser.pause();
-    browser.pause();
     page.getPlaceHolder().click();
-    var aj = page.getTrElementData();
+    let aj = page.getTrElementData();
     expect(aj.get(0).getText()).toEqual('London');
     expect(aj.get(1).getText()).not.toEqual('25.89');
   });
